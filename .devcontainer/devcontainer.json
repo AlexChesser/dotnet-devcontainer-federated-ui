@@ -10,7 +10,13 @@
 		"ghcr.io/devcontainers/features/github-cli:1": {},
 		"ghcr.io/joshuanianji/devcontainer-features/github-cli-persistence:1": {}
 	},
-
+	"extensions": [
+		"ms-dotnettools.vscode-dotnet-runtime",
+		"ms-dotnettools.csharp",
+		"dbaeumer.vscode-eslint",
+		"GitHub.copilot",
+		"GitHub.copilot-chat"
+	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [5000, 5001],
 	"portsAttributes": {
