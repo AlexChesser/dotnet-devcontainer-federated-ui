@@ -3,7 +3,9 @@
 {
 	"name": "C# (.NET)",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"dockerFile": "Dockerfile",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "devcontainer",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
@@ -11,17 +13,17 @@
 		"ghcr.io/joshuanianji/devcontainer-features/github-cli-persistence:1": {},
 		"ghcr.io/devcontainers/features/node:1": {}
 	},
-	// "customizations": {
-	// 	"vscode": {
-	// 		"extensions": [
-	// 			"ms-dotnettools.vscode-dotnet-runtime",
-	// 			"ms-dotnettools.csharp",
-	// 			"dbaeumer.vscode-eslint",
-	// 			"GitHub.copilot",
-	// 			"GitHub.copilot-chat"
-	// 		]
-	// 	}
-	// },
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-dotnettools.vscode-dotnet-runtime",
+				"ms-dotnettools.csharp",
+				"dbaeumer.vscode-eslint",
+				"GitHub.copilot",
+				"GitHub.copilot-chat"
+			]
+		}
+	},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [5000, 5001],
 	"portsAttributes": {
